@@ -1,14 +1,28 @@
-body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+@import 'colors';
+@import 'config';
+
+$max-width: 1200px;
+
+.bg {
+  &-primary {
+    @include setBackground($primary);
   }
-  
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
+  &-dark {
+    @include setBackground($dark);
   }
-  
+  &-light {
+    @include setBackground($light);
+  }
+  &-success {
+    @include setBackground($success);
+  }
+  &-warning {
+    @include setBackground($warning);
+  }
+  &-danger {
+    @include setBackground($danger);
+  }
+  &-info {
+    @include setBackground($info);
+  }
+}

@@ -1,0 +1,14 @@
+@import 'colors';
+
+@function textColor($bgColor) {
+    @if(lightness($bgColor) > 60) {
+        @return $black;
+    } @else {
+        @return $white;
+    }
+}
+
+@mixin setBackground($color) {
+    background-color: $color;
+    color: textColor($color);
+}

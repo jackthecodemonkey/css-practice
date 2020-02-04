@@ -1,13 +1,19 @@
 import React from 'react';
 import './App.scss';
 
+import Nav from '../components/Layout/Nav';
+import Section from '../components/Layout/Section';
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        App 
-      </header>
-    </div>
+    <React.Fragment>
+      <Nav />
+      <Section className="main">
+        <div className="container">
+          Table comes here
+        </div>
+      </Section>
+    </React.Fragment>
   );
 }
 
