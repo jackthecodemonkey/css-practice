@@ -5,7 +5,7 @@ const Nav = props => {
         <nav className="bg-primary">
             <h1>
                 Tender
-      </h1>
+            </h1>
             <ul>
                 <li>View Tender</li>
                 <li>Add New</li>
