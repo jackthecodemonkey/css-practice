@@ -1,5 +1,5 @@
 import { Tender, TenderCollection } from '../../models/';
-import mockTenders from './mockData';
+import mockTenders from '../testData/mockData';
 
 test('Should create a collection of Tender', () => {
     const tenderCollection = new TenderCollection(mockTenders);
