@@ -5,7 +5,7 @@ class TenderService extends BaseService {
     static GetTenders() {
         return fetch(`${Endpoint}/tenders`)
             .then(response => {
-                this.ValidateResponse(response, 0, "Error getting tenders");
+                this.ValidateResponse(response, 0, "Error getting tender list");
                 return response.json()
             });
     }

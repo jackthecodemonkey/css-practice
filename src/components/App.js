@@ -10,10 +10,7 @@ function App() {
     <React.Fragment>
       <Nav />
       <Section className="main">
-        <div className="container">
-          <TenderList />
-          Table comes here
-        </div>
+        <TenderList />
       </Section>
     </React.Fragment>
   );

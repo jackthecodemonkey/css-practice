@@ -6,9 +6,11 @@ import { Message } from '../../components/common';
 class TenderList extends React.Component {
     constructor(props) {
         super(props);
+        this.hideMessage = this.hideMessage.bind(this);
         this.state = {
             tenders: null,
-            message: null,
+            showMessage: false,
+            message: {}
         }
     }
 
@@ -17,17 +19,39 @@ class TenderList extends React.Component {
             const result = await TenderService.GetTenders();
             const { tenders } = new TenderCollection(result.tenders);
             this.setState({ tenders })
-        } catch ({ message }) {
-            this.setState({ message })
+        } catch (error) {
+            this.setState({
+                message: error,
+                showMessage: true,
+            })
         }
+    }
+
+    hideMessage() {
+        this.setState({ showMessage: false })
     }
 
     render() {
         return (
-            <section>
-                <Message text={this.state.message} />
-                <div></div>
-            </section>
+            <section className="container">
+                <Message
+                    showMessage={this.state.showMessage}
+                    onClick={this.hideMessage}
+                    message={this.state.message}
+                />
+                <div>
+                    <div style={{
+                        fontSize: "14px",
+                        marginBottom: "10px",
+                    }}>Tender List</div>
+                    <div style={{
+                        background: "#f8f8f8",
+                        padding: "20px",
+                    }}>
+                        Table comes here
+                    </div>
+                </div>
+            </section >
         )
     }
 }

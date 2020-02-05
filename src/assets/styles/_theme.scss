@@ -1,5 +1,5 @@
-@import 'colors';
-@import 'config';
+@import "colors";
+@import "config";
 
 $max-width: 1200px;
 
@@ -24,5 +24,26 @@ $max-width: 1200px;
   }
   &-info {
     @include setBackground($info);
+  }
+}
+
+.message {
+  &-warning {
+    @extend .bg-warning;
+    transition: all 0.2s;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    font-size: 14px;
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
