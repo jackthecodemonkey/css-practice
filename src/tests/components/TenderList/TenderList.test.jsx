@@ -4,5 +4,5 @@ import TenderContainer from '../../../components/TenderContainer/';
 import { shallow } from 'enzyme';
 
 test('Should render something', () => {
-    const TenderContainer = shallow(<TenderContainer />);
+    const tenderContainer = shallow(<TenderContainer />);
 })
