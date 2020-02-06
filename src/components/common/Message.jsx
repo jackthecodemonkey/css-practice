@@ -26,7 +26,7 @@ class Message extends React.Component {
             message,
             code,
         } = this.props.message;
-
+        console.log(this.props.message);
         const className = this.props.className || GetClassNameByErrorCode(code);
 
         return (

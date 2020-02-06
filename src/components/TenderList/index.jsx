@@ -2,6 +2,7 @@ import React from 'react';
 import { TenderCollection } from '../../models';
 import TenderService from '../../services/TenderService';
 import { Message } from '../../components/common';
+import event from '../../services/events/Event';
 
 class TenderList extends React.Component {
     constructor(props) {
@@ -15,6 +16,9 @@ class TenderList extends React.Component {
     }
 
     async componentDidMount() {
+        event.on("fetchEnd", () => {
+            console.log("hello");
+        })
         try {
             const result = await TenderService.GetTenders();
             const { tenders } = new TenderCollection(result.tenders);
@@ -24,7 +28,7 @@ class TenderList extends React.Component {
                 message: error,
                 showMessage: true,
             })
-        }
+        } 
     }
 
     hideMessage() {
