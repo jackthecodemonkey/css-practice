@@ -1,7 +1,7 @@
 @import "colors";
 @import "config";
 
-$max-width: 1200px;
+$max-width: 1100px;
 
 .bg {
   &-primary {
@@ -12,6 +12,9 @@ $max-width: 1200px;
   }
   &-light {
     @include setBackground($light);
+  }
+  &-lightGrey {
+    @include setBackground($lightGrey);
   }
   &-success {
     @include setBackground($success);
@@ -24,6 +27,34 @@ $max-width: 1200px;
   }
   &-info {
     @include setBackground($info);
+  }
+}
+
+.padding {
+  &-10 {
+    padding: 10px;
+  }
+
+  &-15 {
+    padding: 15px;
+  }
+
+  &-20 {
+    padding: 20px;
+  }
+}
+
+.mb {
+  &-10 {
+    margin-bottom: 10px;
+  }
+
+  &-15 {
+    margin-bottom: 15px;
+  }
+
+  &-20 {
+    margin-bottom: 20px;
   }
 }
 

@@ -1,19 +1,18 @@
 import React from 'react';
 import './App.scss';
-
 import Nav from '../components/Layout/Nav';
 import Section from '../components/Layout/Section';
-import TenderList from './TenderList/index';
+import TenderContainer from './TenderContainer/index';
 import { SpinnerContainer } from './common';
 
 function App() {
   return (
     <React.Fragment>
       <Nav>
-        <SpinnerContainer minDisplay={500} />
+        <SpinnerContainer minDisplay={300} />
       </Nav>
       <Section className="main">
-        <TenderList />
+        <TenderContainer />
       </Section>
     </React.Fragment>
   );

@@ -2,9 +2,9 @@ import React from 'react';
 import { TenderCollection } from '../../models';
 import TenderService from '../../services/TenderService';
 import { Message } from '../../components/common';
-import event from '../../services/events/Event';
+import TenderList from './TenderList';
 
-class TenderList extends React.Component {
+class TenderContainer extends React.Component {
     constructor(props) {
         super(props);
         this.hideMessage = this.hideMessage.bind(this);
@@ -34,27 +34,21 @@ class TenderList extends React.Component {
 
     render() {
         return (
-            <section className="container">
+            <div className="container">
                 <Message
                     showMessage={this.state.showMessage}
                     onClick={this.hideMessage}
                     message={this.state.message}
                 />
-                <div>
-                    <div style={{
-                        fontSize: "14px",
-                        marginBottom: "10px",
-                    }}>Tender List</div>
-                    <div style={{
-                        background: "#f8f8f8",
-                        padding: "20px",
-                    }}>
-                        Table comes here
-                    </div>
+                <div className="bg-lightGrey padding-15 mb-10" style={{ fontSize: "14px" }}>
+                    Tender List
                 </div>
-            </section >
+                <div className="bg-lightGrey padding-20">
+                    <TenderList tenders={this.state.tenders} />
+                </div>
+            </div >
         )
     }
 }
 
-export default TenderList;
+export default TenderContainer;
