@@ -6,6 +6,7 @@ const Nav = props => {
             <h1>
                 Tender
             </h1>
+            {props.children}
             <ul>
                 <li>View Tender</li>
                 <li>Add New</li>

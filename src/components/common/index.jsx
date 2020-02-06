@@ -1,3 +1,9 @@
 import Message from './Message';
+import Spinner from './Spinner';
+import SpinnerContainer from './SpinnerContainer';
 
-export { Message };
+export { 
+    Spinner,
+    SpinnerContainer,
+    Message,
+};

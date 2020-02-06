@@ -16,9 +16,6 @@ class TenderList extends React.Component {
     }
 
     async componentDidMount() {
-        event.on("fetchEnd", () => {
-            console.log("hello");
-        })
         try {
             const result = await TenderService.GetTenders();
             const { tenders } = new TenderCollection(result.tenders);
@@ -28,7 +25,7 @@ class TenderList extends React.Component {
                 message: error,
                 showMessage: true,
             })
-        } 
+        }
     }
 
     hideMessage() {
