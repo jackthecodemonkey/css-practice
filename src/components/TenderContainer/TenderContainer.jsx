@@ -1,7 +1,7 @@
 import React from 'react';
 import { TenderCollection } from '../../models';
 import TenderService from '../../services/TenderService';
-import { Message } from '../../components/common';
+import { Message } from '../common';
 import TenderList from './TenderList';
 
 class TenderContainer extends React.Component {
@@ -18,7 +18,7 @@ class TenderContainer extends React.Component {
     async componentDidMount() {
         try {
             const result = await TenderService.GetTenders();
-            const { tenders } = new TenderCollection(result.tenders);
+            const { tenders } = new TenderCollection(result);
             this.setState({ tenders })
         } catch (error) {
             this.setState({

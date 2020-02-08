@@ -12,6 +12,9 @@ class TenderService extends BaseService {
             .then(response => {
                 this.ValidateResponse(response, 0, BadResponseGettingTenders);
                 return response.json()
+            })
+            .then((result)=>{
+                return result.tenders;
             }).catch(() => {
                 throw new ServiceError(0, BadResponseGettingTenders);
             }).finally(() => {

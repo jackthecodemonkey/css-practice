@@ -2,7 +2,7 @@ import React from 'react';
 import './App.scss';
 import Nav from '../components/Layout/Nav';
 import Section from '../components/Layout/Section';
-import TenderContainer from './TenderContainer/index';
+import { TenderContainer } from './TenderContainer';
 import { SpinnerContainer } from './common';
 
 function App() {
