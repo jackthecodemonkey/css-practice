@@ -14,11 +14,11 @@ const TenderList = props => {
     return (
         <div>
             <div>
-                    <div>Title</div>
-                    <div>Description</div>
-                    <div>Min Volume</div>
-                    <div>Max Volume</div>
-                    <div>Close Date</div>
+                <div>Title</div>
+                <div>Description</div>
+                <div>Min Volume</div>
+                <div>Max Volume</div>
+                <div>Close Date</div>
             </div>
             <div>
                 {rows}
