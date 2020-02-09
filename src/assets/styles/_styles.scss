@@ -1,6 +1,7 @@
 @import "colors";
 @import "theme";
 @import "config";
+@import "spacing";
 
 * {
   box-sizing: border-box;
@@ -74,7 +75,7 @@ nav {
   .container {
     width: 100%;
     max-width: $max-width;
-    background: white;
+    background: $white;
     padding: 10px 20px;
     margin-top: 20px;
     margin-left: 20px;

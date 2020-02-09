@@ -1,0 +1,23 @@
+@import "../../../assets/styles/theme";
+
+.message {
+  &-warning {
+    @extend .bg-warning;
+    transition: all 0.2s;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    font-size: 14px;
+    align-items: center;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

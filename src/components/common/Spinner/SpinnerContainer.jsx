@@ -1,7 +1,7 @@
 import React from 'react';
-import Spinner from './Spinner';
-import { Event, EventTypes } from '../../services/events';
-import { StopWatch } from '../../models';
+import { Spinner } from '.';
+import { Event, EventTypes } from '../../../services/events';
+import { StopWatch } from '../../../models';
 
 class SpinnerContainer extends React.Component {
     constructor(props) {

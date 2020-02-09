@@ -1,5 +1,6 @@
 @import "colors";
 @import "config";
+@import "spacing";
 
 $max-width: 1100px;
 
@@ -27,91 +28,5 @@ $max-width: 1100px;
   }
   &-info {
     @include setBackground($info);
-  }
-}
-
-.padding {
-  &-10 {
-    padding: 10px;
-  }
-
-  &-15 {
-    padding: 15px;
-  }
-
-  &-20 {
-    padding: 20px;
-  }
-}
-
-.mb {
-  &-10 {
-    margin-bottom: 10px;
-  }
-
-  &-15 {
-    margin-bottom: 15px;
-  }
-
-  &-20 {
-    margin-bottom: 20px;
-  }
-}
-
-.message {
-  &-warning {
-    @extend .bg-warning;
-    transition: all 0.2s;
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    height: 60px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    top: 0;
-    left: 0;
-    padding: 10px;
-    font-size: 14px;
-    align-items: center;
-    &:hover {
-      cursor: pointer;
-    }
-  }
-}
-
-/* resource: https://loading.io/css/ */
-.lds-ripple {
-  top: 10px;
-  left: 100px;
-  display: inline-block;
-  position: absolute;
-  width: 40px;
-  height: 40px;
-}
-.lds-ripple div {
-  position: absolute;
-  border: 4px solid #fff;
-  opacity: 1;
-  border-radius: 50%;
-  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
-}
-.lds-ripple div:nth-child(2) {
-  animation-delay: -0.5s;
-}
-@keyframes lds-ripple {
-  0% {
-    top: 18px;
-    left: 18px;
-    width: 0;
-    height: 0;
-    opacity: 1;
-  }
-  100% {
-    top: 0px;
-    left: 0px;
-    width: 36px;
-    height: 36px;
-    opacity: 0;
   }
 }
