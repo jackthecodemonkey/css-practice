@@ -18,7 +18,7 @@ class TenderContainer extends React.Component {
     async componentDidMount() {
         try {
             const result = await TenderService.GetTenders();
-            const { tenders } = new TenderCollection(result);
+            const { tenders } = new TenderCollection(result.tenders);
             this.setState({ tenders })
         } catch (error) {
             this.setState({
